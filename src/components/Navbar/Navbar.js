@@ -13,7 +13,7 @@ import {
 } from "./NavbarElements"
 import ResumePDF from '../../assets/Resume_v2.pdf'
 
-const Navbar = () => {
+const Navbar = ({toggle}) => {
   return (
     <>
       <Nav>
@@ -21,7 +21,7 @@ const Navbar = () => {
           <NavLogo to="about">
             KG
           </NavLogo>
-          <MobileIcon>
+          <MobileIcon onClick={toggle}>
             <FaBars />
           </MobileIcon>
           <NavMenu>

@@ -2,13 +2,13 @@ import styled from "styled-components"
 import { Link } from "react-scroll"
 
 export const Nav = styled.nav`
-    background: #1d3e57;
+    background: #0c2233;
     height: 80px;
     // margin-top: -80px;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     position: sticky;
     top: 0;
     z-index: 10;
@@ -25,14 +25,13 @@ export const NavbarContainer = styled.div`
     z-index: 1;
     width: 100%;
     padding: 0 12px;
-    max-width: 1100px;
+    /* max-width: 1100px; */
 `
 
 export const NavLogo = styled(Link)`
     color: #6df7cc;
-    justify-self: flex-start;
     cursor: pointer;
-    font-size: 2rem;
+    font-size: 2.2rem;
     display: flex;
     align-items: center;
     margin-left: 24px;
@@ -60,8 +59,8 @@ export const NavMenu = styled.ul`
     align-items: center;
     list-style: none;
     text-align: center;
-    justify-self: flex-end;
-    /* margin-right: -22px; */
+    justify-content: center;
+    gap: 1rem;
 
     @media screen and (max-width: 768px) {
         display: none;
@@ -84,6 +83,10 @@ export const NavLinks = styled(Link)`
     &:active {
         border-bottom: 3px solid #6df7cc;
     }
+
+    &:hover {
+        color: #6df7cc;
+    }
 `
 
 export const NavBtn = styled.nav`
@@ -97,12 +100,12 @@ export const NavBtn = styled.nav`
 
 export const NavBtnLink = styled.a`
     border-radius: 10px;
-    background: #1d3e57;
+    background: #0c2233;
     white-space: nowrap;
     padding: 10px 22px;
     color: #c3d0db;
-    font-size: 16px;
-    outline: none;
+    font-size: 1.1rem;
+    /* outline: none; */
     border: solid 1px #6df7cc;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
