@@ -9,18 +9,26 @@ import {SiRubyonrails} from "react-icons/si"
 import {DiGit} from "react-icons/di"
 
 export const SkillsContainer = styled.div`
-    width: 100%;
     /* border: solid 5px green; */
+    max-width: 1200px;
+    margin: auto;
     height: 100vh;
-    padding: 10px 80px;
+    padding: 10px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `
 
+export const SkillsWrapper = styled.div`
 
-export const SkillsTitle = styled.div`
+`
+
+export const SkillsTitle = styled.h1`
     color: #6df7cc;
     width: 100%;
+    text-align: center;
     font-size: 2rem;
-    margin: 30px 0;;
+    font-weight: solid;
 
     @media screen and (max-width: 768px) {
         font-size: 1.5rem;
@@ -33,15 +41,18 @@ export const SkillsTitle = styled.div`
 
 export const SkillsContent = styled.p`
     font-size: 1.2rem;
+    text-align: center;
     color: #c3d0db;
-    margin-bottom: 50px;
+    margin: 80px 0;
 
     @media screen and (max-width: 768px) {
         font-size: 1.1rem;
+        margin: 60px 0;
     }
 
     @media screen and (max-width: 480px) {
         font-size: 1rem;
+        margin: 40px 0;
     }
 `
 
@@ -49,37 +60,54 @@ export const SkillsSubText = styled.p`
     font-size: 1.2rem;
     color: #c3d0db;
     text-align: center;
+    margin: 10px 0px 40px;
+
+    @media screen and (max-width: 768px) {
+        font-size: 1.1rem;
+        margin: 2px 0px 30px;
+    }
+
+    @media screen and (max-width: 480px) {
+        font-size: 1rem;
+    }
 `
 
 export const Icon = styled.div`
     font-size: 6rem;
-    /* cursor: pointer; */
     outline: none;
     text-align: center;
+
+    @media screen and (max-width: 768px) {
+        font-size: 4rem;
+    }
+
+    @media screen and (max-width: 480px) {
+        font-size: 3rem;
+    }
 `
 
 export const HTMLIcon = styled(AiFillHtml5)`
-    color: #6df7cc;
+    color: #f06529;
 `
 export const CSSIcon = styled(DiCss3)`
-    color: #6df7cc;
+    color: #307bf2;
 `
 export const JSIcon = styled(SiJavascript)`
-    color: #6df7cc;
+    color: #ffe354;
 `
 export const ReactIcon = styled(FaReact)`
-    color: #6df7cc;
+    color: #32d4ed;
 `
 export const PyIcon = styled(FaPython)`
-    color: #6df7cc;
+    color: #4B8BBE;
 `
 export const RubyIcon = styled(DiRuby)`
-    color: #6df7cc;
+    color: #b02121;
 `
 export const RailsIcon = styled(SiRubyonrails)`
-    color: #6df7cc;
+    color: #eb2a2a;
 `
 export const GitIcon = styled(DiGit)`
-    color: #6df7cc;
+    color: #F1502F;
 `
 

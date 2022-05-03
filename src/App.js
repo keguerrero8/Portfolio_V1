@@ -2,7 +2,7 @@ import './App.css';
 import Home from './pages/Home';
 
 
-function App() {
+function App({theme}) {
   //0c2233 is darkblue color theme
   //6df7cc is neon blue green color theme
   //c3d0db is light gray color of text
@@ -10,7 +10,7 @@ function App() {
   //102e45 is side mobile bar color
   return (
     <>
-      <Home />
+      <Home theme={theme}/>
     </>
   );
 }

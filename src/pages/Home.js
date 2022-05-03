@@ -6,7 +6,7 @@ import Hero from '../components/Hero/Hero';
 import AboutMe from '../components/AboutMe/AboutMe';
 import Skills from '../components/Skills/Skills';
 
-const Home = () => {
+const Home = ({theme}) => {
   const [isOpen, setOpen] = useState(false)
 
   const toggle = () => {
@@ -18,7 +18,7 @@ const Home = () => {
       <Navbar toggle={toggle}/>
       <Hero />
       <AboutMe/>
-      {/* <Skills /> */}
+      <Skills theme={theme}/>
     </>
   )
 }

@@ -1,63 +1,22 @@
 import styled from "styled-components";
 
-//ORIGINAL
-// export const HeroContainer = styled.div`
-//     background: #0c2233;
-//     display: flex;
-//     /* justify-content: center; */
-//     /* align-items: content; */
-//     padding: 0 30px;
-//     height: 600px;
-//     /* position: relative; */
-//     z-index: 1;
-
-//     /* Add before styles */
-// `
-
-// export const HeroContent = styled.div`
-//     z-index: 3;
-//     max-width: 1200px;
-//     /* position: absolute; */
-//     padding: 8px 12px;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     justify-content: center;
-//     gap: 1.5rem;
-// `
-
 export const HeroContainer = styled.div`
     background: #0c2233;
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: content; */
-    /* padding: 0 10px; */
     height: 100vh;
     position: relative;
     z-index: 1;
     max-width: 1200px;
     margin: auto;
     /* border: solid 5px green; */
-    /* @media screen and (max-width: 768px) {
-        height: 600px
-    } */
-    
 `
 
 export const HeroContent = styled.div`
     z-index: 3;
-    /* width: 100%;
-    margin: auto; */
     position: absolute;
     padding: 10px;
     top: 50%;
     left: 15%;
     transform: translate(0, -50%);
-    /* display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem; */
 
     @media screen and (max-width: 768px) {
         left: 10%;
@@ -97,10 +56,8 @@ export const HeroName = styled.div`
     color: #c3d0db;
     font-size: 4.5rem;
     font-weight: 600;
-    /* text-align: center; */
     align-self: start;
     opacity: 0;
-    /* max-width: 600px; */
 
     @media screen and (max-width: 768px) {
         font-size: 3.3rem;

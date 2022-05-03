@@ -12,6 +12,7 @@ export const AboutMeContainer = styled.div`
 
     @media screen and (max-width: 768px) {
         flex-direction: column;
+        justify-content: space-around;
         text-align: center;
         padding: 10px 20px;
     }
@@ -28,6 +29,7 @@ export const AboutMePicContainer = styled.div`
 
     @media screen and (max-width: 768px) {
         flex: 1;
+        align-items: start;
     }
 
     @media screen and (max-width: 480px) {
@@ -55,6 +57,18 @@ export const AboutMeImgContainer = styled.div`
     border-radius: 30px;
     overflow: hidden;
     position: relative;
+
+    @media screen and (max-width: 768px) {
+        height: 35vh;
+    }
+
+    @media screen and (max-width: 480px) {
+        height: 30vh;
+    }
+
+    @media screen and (max-width: 340px) {
+        height: 20vh;
+    }
 `
 
 export const AboutMeImg = styled.img`
@@ -105,5 +119,9 @@ export const AboutMetext = styled.div`
 
     @media screen and (max-width: 480px) {
         font-size: 1rem;
+    }
+
+    @media screen and (max-width: 320px) {
+        font-size: 0.9rem;
     }
 `
