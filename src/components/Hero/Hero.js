@@ -11,6 +11,9 @@ const HeroElements = () => {
 
   useEffect(() => {
     t1.current = gsap.timeline({defaults: {duration: 1, ease: "sine"}})
+    // .from(hi.current, { y: "50%", opacity: 0})
+    // .from(name.current, { y: "50%", opacity: 0})
+    // .from(content.current, { y: "50%", opacity: 0})
     .to(hi.current, { opacity: 1})
     .to(name.current, { opacity: 1})
     .to(content.current, { opacity: 1})
@@ -22,12 +25,11 @@ const HeroElements = () => {
             <VideoBg autoPlay loop muted src={Video} type="video/mp4" />
         </HeroBg> */}
         <HeroContent>
-          <HeroText ref={hi} isHello={true}>Hi, I am</HeroText>
+          <HeroText ref={hi} isHello={true}>Hi, my name is</HeroText>
           <HeroName ref={name}>Kevin Guerrero</HeroName>
           <HeroText ref={content}>
-            I am a software engineer with experience in building <span style={{color: "#6df7cc"}}>full stack web applications.</span> In my previous career, I gained extensive experience 
-            designing and implementing software features on large scale medical device systems. I have a passion for <span style={{color: "#6df7cc"}}>designing and building solutions </span>
-            to difficult engineering problems.
+            I'm a software engineer with a strong passion for problem solving and building <span style={{color: "#6df7cc"}}>full stack web applications.</span> Currently, I am looking for opportunities where I can continue to learn and grow, while providing immediate
+            impact in a team setting.  
           </HeroText>
         </HeroContent>
     </HeroContainer>

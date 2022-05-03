@@ -1,4 +1,5 @@
-import React from 'react'
+import React, {useRef, useEffect} from 'react'
+import gsap from 'gsap'
 import {FaBars} from "react-icons/fa"
 import {
   Nav, 
@@ -14,9 +15,18 @@ import {
 import ResumePDF from '../../assets/Resume_v2.pdf'
 
 const Navbar = ({toggle}) => {
+  // const t1 = useRef()
+  const navbar = useRef()
+
+  // useEffect(() => {
+  //   t1.current = gsap.timeline({defaults: {duration: 1, ease: "sine"}})
+  //   .to(navbar.current, { y: "50%"})
+
+  // }, [])
+
   return (
     <>
-      <Nav>
+      <Nav ref={navbar}>
         <NavbarContainer>
           <NavLogo to="about">
             KG
@@ -26,16 +36,16 @@ const Navbar = ({toggle}) => {
           </MobileIcon>
           <NavMenu>
             <NavItem>
-              <NavLinks to="about">About</NavLinks>
+              <NavLinks to="about" smooth={true}>About</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="skills">Skills</NavLinks>
+              <NavLinks to="skills" smooth={true}>Skills</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="projects">Projects</NavLinks>
+              <NavLinks to="projects" smooth={true}>Projects</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="contact">Contact</NavLinks>
+              <NavLinks to="contact" smooth={true}>Contact</NavLinks>
             </NavItem>
             <NavBtn>
               <NavBtnLink href="./Resume_v2.pdf" download>Resume</NavBtnLink>

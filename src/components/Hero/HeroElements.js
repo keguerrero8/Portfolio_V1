@@ -32,12 +32,16 @@ export const HeroContainer = styled.div`
     /* justify-content: center; */
     /* align-items: content; */
     /* padding: 0 10px; */
-    height: 600px;
+    height: 100vh;
     position: relative;
     z-index: 1;
+    max-width: 1200px;
+    margin: auto;
     /* border: solid 5px green; */
-
-    /* Add before styles */
+    /* @media screen and (max-width: 768px) {
+        height: 600px
+    } */
+    
 `
 
 export const HeroContent = styled.div`
@@ -72,7 +76,7 @@ export const HeroText = styled.div`
     color: ${({isHello}) => (isHello ? "#6df7cc" : "#c3d0db")};
     font-size: 1.3rem;
     align-self: start;
-    width: 80%;
+    width: 90%;
     line-height: 1.5;
     opacity: 0;
     /* text-align: center; */
