@@ -19,10 +19,6 @@ export const SkillsContainer = styled.div`
     justify-content: center;
 `
 
-export const SkillsWrapper = styled.div`
-
-`
-
 export const SkillsTitle = styled.h1`
     color: #6df7cc;
     width: 100%;

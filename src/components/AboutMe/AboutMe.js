@@ -11,6 +11,7 @@ import {
  } from './AboutMeElements'
 import Profile from "../../assets/profile.png"
 
+
 const AboutMe = () => {
   return (
     <AboutMeContainer id="about">
