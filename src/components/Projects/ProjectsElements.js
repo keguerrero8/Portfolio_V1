@@ -30,7 +30,7 @@ export const ProjectsContent = styled.p`
     font-size: 1.2rem;
     text-align: center;
     color: #c3d0db;
-    margin: 60px 0;
+    margin: 40px 0;
 
     @media screen and (max-width: 768px) {
         font-size: 1.1rem;
@@ -38,7 +38,7 @@ export const ProjectsContent = styled.p`
 
     @media screen and (max-width: 480px) {
         font-size: 1rem;
-        margin: 40px 0;
+        margin: 30px 0;
     }
 `
 
