@@ -11,9 +11,6 @@ const HeroElements = () => {
 
   useEffect(() => {
     t1.current = gsap.timeline({defaults: {duration: 1, ease: "sine"}})
-    // .from(hi.current, { y: "50%", opacity: 0})
-    // .from(name.current, { y: "50%", opacity: 0})
-    // .from(content.current, { y: "50%", opacity: 0})
     .to(hi.current, { opacity: 1})
     .to(name.current, { opacity: 1})
     .to(content.current, { opacity: 1})
