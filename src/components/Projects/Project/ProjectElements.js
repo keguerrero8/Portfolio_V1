@@ -18,6 +18,11 @@ export const ProjectImageContainer = styled.div`
     align-items: center;
     justify-content: center;
     height: 100%;
+    position: relative;
+
+    @media screen and (max-width: 768px) {
+        flex: 1;
+    }
 `
 
 export const ProjectImageWrapper = styled.div` 
@@ -26,6 +31,128 @@ export const ProjectImageWrapper = styled.div`
     overflow: hidden;
     width: 90%;
     height: 350px;
+
+    @media screen and (max-width: 480px) {
+        height: 400px;
+        width: 100%;
+    }
+`
+
+export const ProjectOverlay = styled.div`
+
+    @media screen and (max-width: 768px) {
+        width: 90%;
+        height: 350px;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        background-color: rgba(0,0,0,0.9);
+        /* background-color: rgba(12, 34, 51, 0.9); */
+        border-radius: 10px 10px 0px 0px;
+    }
+
+    @media screen and (max-width: 480px) {
+        width: 100%;
+        height: 400px;
+    }
+`
+
+export const ProjectOverlayTitle = styled.h1`
+    display: none;
+
+    @media screen and (max-width: 768px) {
+        display: block;
+        color: #6df7cc;
+        text-align: center;
+        font-size: 1.5rem;
+        margin: 30px 0px 20px 0px;
+    }
+
+    @media screen and (max-width: 480px) {
+        font-size: 1.2rem;
+        margin: 30px 0px 10px 0px;
+    }
+
+    @media screen and (max-width: 330px) {
+        margin: 20px 0px 10px 0px;
+    }
+`
+
+export const ProjectOverlayDescription = styled.div`
+    display: none;
+
+    @media screen and (max-width: 768px) {
+        display: block;
+        color: white;
+        text-align: center;
+        font-size: 1rem;
+        padding: 0px 20px;
+        line-height: 1.4;
+    }
+
+    @media screen and (max-width: 480px) {
+        font-size: 0.8rem;
+        line-height: 1.3;
+    }
+`
+
+export const ProjectOverlayTechnologies = styled.div`
+    display: none;
+    /* height: 40px; */
+
+    @media screen and (max-width: 768px) {
+        display: block;
+        margin-top: 20px;
+        padding: 0px 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    @media screen and (max-width: 480px) {
+        justify-content: center;
+        gap: 0.7rem;
+    }
+`
+
+export const OverlayTechnology = styled.div`
+    display: none;
+
+    @media screen and (max-width: 768px) {
+        display: block;
+        font-size: 0.8rem;
+        color: #6df7cc;
+    }
+
+    @media screen and (max-width: 480px) {
+        font-size: 0.7rem;
+    }
+`
+
+export const ProjectOverlayLinkWrapper = styled.div`
+    display: none;
+
+    @media screen and (max-width: 768px) {
+        margin: 30px auto;
+        width: 90%;
+        display: flex;
+        justify-content: space-around;
+    }
+`
+
+export const ProjectOverlayLink = styled.a`
+
+    @media screen and (max-width: 768px) {
+        font-size: 1.5rem;
+        cursor: pointer;
+        outline: none;
+    }
+
+    @media screen and (max-width: 480px) {
+        font-size: 1.3rem;
+    }
 `
 
 export const ProjectBrowser = styled.div` 
@@ -55,6 +182,11 @@ export const ProjectContent = styled.div`
     flex-direction: column;
     width: 100%;
     /* border: solid 5px orange; */
+
+    @media screen and (max-width: 768px) {
+        display: none;
+        /* flex: 0; */
+    }
 `   
 export const ProjectContentWrapper = styled.div`
     padding: 10px;
@@ -82,20 +214,6 @@ export const ProjectDescription = styled.div`
     font-size: 1rem;
     line-height: 1.5;
     color: #c3d0db;
-    /* margin: 20px 0px; */
-
-    @media screen and (max-width: 768px) {
-        font-size: 0.9rem;
-        line-height: 1.3;
-    }
-
-    @media screen and (max-width: 480px) {
-        font-size: 0.8rem;
-    }
-
-    @media screen and (max-width: 320px) {
-        font-size: 0.7rem;
-    }
 `
 
 export const ProjectTechnologies = styled.div`

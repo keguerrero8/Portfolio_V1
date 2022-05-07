@@ -13,6 +13,14 @@ import {
     ProjectTechnologies,
     ProjectLinkWrapper,
     ProjectLink,
+    ProjectOverlay,
+    ProjectOverlayTitle,
+    ProjectOverlayDescription,
+    ProjectOverlayTechnologies,
+    ProjectOverlayLinkWrapper,
+    OverlayTechnology,
+    ProjectOverlayLink,
+
     Technology,
     GithubIcon,
     LinkIcon,
@@ -33,6 +41,18 @@ const Project = ({project}) => {
                 </ProjectBrowser>
                 <ProjectImg src={project.image}/>
             </ProjectImageWrapper>
+            <ProjectOverlay>
+                <ProjectOverlayTitle>{project.title}</ProjectOverlayTitle>
+                <ProjectOverlayDescription>{project.description}</ProjectOverlayDescription>
+                <ProjectOverlayTechnologies>
+                    {project.technologies.map(tech => <OverlayTechnology key={tech}>{tech}</OverlayTechnology>)}
+                </ProjectOverlayTechnologies>
+                <ProjectOverlayLinkWrapper>
+                    <ProjectOverlayLink href={project.githubLink}><GithubIcon /></ProjectOverlayLink>
+                    <ProjectOverlayLink href={project.liveSite}><LinkIcon /></ProjectOverlayLink>
+                    <ProjectOverlayLink href={project.liveSite}><VideoIcon /></ProjectOverlayLink>
+                </ProjectOverlayLinkWrapper>
+            </ProjectOverlay>
         </ProjectImageContainer>
         <ProjectContent>
             <ProjectContentWrapper>
