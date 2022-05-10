@@ -35,6 +35,11 @@ export const ProjectImageWrapper = styled.div`
     @media screen and (max-width: 480px) {
         height: 400px;
         width: 100%;
+        overflow: scroll;;
+    }
+
+    @media screen and (max-width: 280px) {
+        height: 500px;
     }
 `
 
@@ -53,8 +58,13 @@ export const ProjectOverlay = styled.div`
     }
 
     @media screen and (max-width: 480px) {
-        width: 100%;
         height: 400px;
+        width: 100%;
+        overflow: scroll;;
+    }
+
+    @media screen and (max-width: 280px) {
+        height: 500px;
     }
 `
 

@@ -29,7 +29,6 @@ import {
 
 
 const Project = ({project}) => {
-  console.log(project.image)
   return (
     <ProjectContainer>
         <ProjectImageContainer>
@@ -50,7 +49,7 @@ const Project = ({project}) => {
                 <ProjectOverlayLinkWrapper>
                     <ProjectOverlayLink href={project.githubLink}><GithubIcon /></ProjectOverlayLink>
                     <ProjectOverlayLink href={project.liveSite}><LinkIcon /></ProjectOverlayLink>
-                    <ProjectOverlayLink href={project.liveSite}><VideoIcon /></ProjectOverlayLink>
+                    <ProjectOverlayLink href={project.demoLink}><VideoIcon /></ProjectOverlayLink>
                 </ProjectOverlayLinkWrapper>
             </ProjectOverlay>
         </ProjectImageContainer>
@@ -65,7 +64,7 @@ const Project = ({project}) => {
             <ProjectLinkWrapper>
                 <ProjectLink href={project.githubLink}><GithubIcon /></ProjectLink>
                 <ProjectLink href={project.liveSite}><LinkIcon /></ProjectLink>
-                <ProjectLink href={project.liveSite}><VideoIcon /></ProjectLink>
+                <ProjectLink href={project.demoLink}><VideoIcon /></ProjectLink>
             </ProjectLinkWrapper>
         </ProjectContent>
     </ProjectContainer>
