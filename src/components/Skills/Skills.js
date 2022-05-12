@@ -21,7 +21,7 @@ const Skills = () => {
     <SkillsContainer id="skills">
         <div>
             <SkillsTitle>Skills</SkillsTitle>
-            <SkillsContent>Here are some of the technologies that I use:</SkillsContent>
+            <SkillsContent>These are the technologies I work with:</SkillsContent>
             <Grid container spacing={2}>
                 <Grid item xs={6} sm={3} >
                     <Icon>

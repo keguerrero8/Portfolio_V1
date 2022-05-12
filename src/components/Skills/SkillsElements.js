@@ -39,16 +39,15 @@ export const SkillsContent = styled.p`
     font-size: 1.2rem;
     text-align: center;
     color: #c3d0db;
-    margin: 80px 0;
+    margin: 30px 0 80px 0;
 
     @media screen and (max-width: 768px) {
         font-size: 1.1rem;
-        margin: 60px 0;
     }
 
     @media screen and (max-width: 480px) {
         font-size: 1rem;
-        margin: 40px 0;
+        margin: 20px 0 50px 0;
     }
 `
 

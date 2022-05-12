@@ -32,7 +32,7 @@ const Sidebar = ({toggle, isOpen}) => {
             </SidebarLink>
           </SidebarMenu>
           <SideBtnWrap>
-              <SidebarResume href="./Resume_v2.pdf" download>Resume</SidebarResume>
+              <SidebarResume href="./Resume_KG.pdf" download>Resume</SidebarResume>
           </SideBtnWrap>
       </SidebarWrapper>
     </SidebarContainer>

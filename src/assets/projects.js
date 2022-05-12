@@ -6,7 +6,7 @@ export const projects = [
         description: "A project management app for software engineers inspired by Scrum framework. Features include diagram creation, project taskboard management, and chat functionality.",
         githubLink: "https://github.com/keguerrero8/DevMaster",
         technologies: ["React", "Ruby on Rails", "Websockets", "Github API", "Heroku"],
-        demoLink: "https://www.loom.com/share/e7cda6f2d5324265a1a4a3635f88f4fd",
+        demoLink: "https://www.loom.com/share/c0e09f357d3e4a82a6633f3cdd49aa48",
         liveSite: "http://devmaster-kg.herokuapp.com"
     },
     {

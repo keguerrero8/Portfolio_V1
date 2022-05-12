@@ -12,7 +12,7 @@ import {
   NavBtn,
   NavBtnLink
 } from "./NavbarElements"
-import ResumePDF from '../../assets/Resume_v2.pdf'
+// import ResumePDF from '../../assets/Resume_v2.pdf'
 
 const Navbar = ({toggle}) => {
   // const t1 = useRef()
@@ -48,7 +48,7 @@ const Navbar = ({toggle}) => {
               <NavLinks to="contact" smooth={true}>Contact</NavLinks>
             </NavItem>
             <NavBtn>
-              <NavBtnLink href="./Resume_v2.pdf" download>Resume</NavBtnLink>
+              <NavBtnLink href="./Resume_KG.pdf" download>Resume</NavBtnLink>
               {/* <NavBtnLink href={ResumePDF} download>Resume</NavBtnLink> */}
             </NavBtn>
           </NavMenu>
