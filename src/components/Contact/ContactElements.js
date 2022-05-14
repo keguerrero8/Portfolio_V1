@@ -38,7 +38,10 @@ export const ContactLeft = styled.div`
 
 export const ContactRight = styled.div`
     flex: 1.3;
-    border: solid yellow 5px;
+    /* border: solid yellow 5px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `
 
 export const ContactInfo = styled.div`
@@ -90,4 +93,94 @@ export const LinkedInIcon = styled(AiFillLinkedin)`
 
 export const GithubIcon = styled(AiFillGithub)`
     color: #6df7cc;
+`
+
+export const FormContainer = styled.form`
+    /* border: solid blue 5px; */
+    width: 90%;
+`
+
+export const InputContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+`
+
+export const InputSmall = styled.input`
+    width: 50%;
+    height: 50px;
+    padding: 5px 0px 0px 20px;
+    border: none;
+    font-size: 1rem;
+    background-color: #39393d;
+    color: #c3d0db;
+
+    &::placeholder{
+        color: #c3d0db;
+        transition: color 0.3s ease;
+    }
+
+    &:focus{
+        outline: none;
+        border-bottom: solid #6df7cc 1px;
+        transition: border-bottom 0.3s ease;
+    }
+
+    &:focus::placeholder{
+        color: transparent;
+    }
+
+`
+
+
+export const InputLarge = styled.input`
+    margin-top: 0.5rem;
+    width: 100%;
+    height: 50px;
+    padding: 5px 0px 0px 20px;
+    font-size: 1rem;
+    background-color: #39393d;
+    border: none;
+    color: #c3d0db;
+
+    &::placeholder{
+        color: #c3d0db;
+        transition: color 0.3s ease;
+    }
+
+    &:focus{
+        outline: none;
+        border-bottom: solid #6df7cc 1px;
+        transition: border-bottom 0.3s ease;
+    }
+
+    &:focus::placeholder{
+        color: transparent;
+    }
+`
+
+export const TextArea = styled.textarea`
+    margin-top: 0.5rem;
+    width: 100%;
+    height: 300px;
+    padding: 20px;
+    font-size: 1rem;
+    background-color: #39393d;
+    border: none;
+    color: #c3d0db;
+
+    &::placeholder{
+        color: #c3d0db;
+        transition: color 0.3s ease;
+    }
+
+    &:focus{
+        outline: none;
+        border-bottom: solid #6df7cc 1px;
+        transition: border-bottom 0.3s ease;
+    }
+
+    &:focus::placeholder{
+        color: transparent;
+    }
 `

@@ -13,7 +13,12 @@ import {
     MapIcon,
     MailIcon,
     LinkedInIcon,
-    GithubIcon
+    GithubIcon,
+    FormContainer,
+    InputContainer,
+    InputSmall,
+    InputLarge,
+    TextArea
 } from './ContactElements'
 
 const Contact = () => {
@@ -42,6 +47,16 @@ const Contact = () => {
                 </ContactSocialMedia>
             </ContactLeft>
             <ContactRight>
+                <FormContainer>
+                    <InputContainer>
+                        <InputSmall placeholder="Name" name="user_name"/>
+                        <InputSmall placeholder="Email" name="user_email"/>
+                    </InputContainer>
+                    <InputContainer>
+                        <InputLarge placeholder="Subject" name="user_subject"/>
+                    </InputContainer>
+                    <TextArea placeholder="Enter Message here..." name="message"/>
+                </FormContainer>
             </ContactRight>
         </ContactWrapper>
     </ContactContainer>
