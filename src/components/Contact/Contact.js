@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useRef} from 'react'
 import { 
     ContactContainer,
     ContactTitle,
@@ -14,19 +14,27 @@ import {
     MailIcon,
     LinkedInIcon,
     GithubIcon,
+    ContactText,
     FormContainer,
     InputContainer,
     InputSmall,
     InputLarge,
-    TextArea
+    TextArea,
+    Button,
+    ButtonContainer
 } from './ContactElements'
 
 const Contact = () => {
+  const formRef = useRef()
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+  }
+
   return (
     <ContactContainer id="contact">
         <ContactWrapper>
             <ContactLeft>
-                <ContactTitle>Contact Me</ContactTitle>
                 <ContactInfo>
                     <ContactInfoWrapper>
                         <MapIcon /> 
@@ -47,7 +55,12 @@ const Contact = () => {
                 </ContactSocialMedia>
             </ContactLeft>
             <ContactRight>
-                <FormContainer>
+                <ContactTitle>Contact Me</ContactTitle>
+                <ContactText>
+                    I am actively seeking opportunities in software engineering but if you want to just get in touch my inbox is always open. Just shoot me a message 
+                    and I'll get back to you as soon as I can!
+                </ContactText>
+                <FormContainer ref={formRef} onSubmit={handleSubmit}>
                     <InputContainer>
                         <InputSmall placeholder="Name" name="user_name"/>
                         <InputSmall placeholder="Email" name="user_email"/>
@@ -56,6 +69,9 @@ const Contact = () => {
                         <InputLarge placeholder="Subject" name="user_subject"/>
                     </InputContainer>
                     <TextArea placeholder="Enter Message here..." name="message"/>
+                    <ButtonContainer>
+                        <Button>Send</Button>
+                    </ButtonContainer>
                 </FormContainer>
             </ContactRight>
         </ContactWrapper>

@@ -2,7 +2,8 @@ import styled from "styled-components"
 import { Link } from "react-scroll"
 
 export const Nav = styled.nav`
-    background: #0c2233;
+    /* background: #0c2233; */
+    background-color: #1b1b1c;
     height: 80px;
     // margin-top: -80px;
     display: flex;
@@ -100,7 +101,8 @@ export const NavBtn = styled.nav`
 
 export const NavBtnLink = styled.a`
     border-radius: 10px;
-    background: #0c2233;
+    /* background: #0c2233; */
+    background: #1b1b1c;
     white-space: nowrap;
     padding: 10px 22px;
     color: #c3d0db;

@@ -26,6 +26,10 @@ export const ContactWrapper = styled.div`
     display: flex;
     height: 100%;
     padding: 30px;
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+    }
 `
 
 export const ContactLeft = styled.div`
@@ -33,15 +37,28 @@ export const ContactLeft = styled.div`
     /* border: solid green 5px; */
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 3rem;
+
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
 `
 
 export const ContactRight = styled.div`
     flex: 1.3;
     /* border: solid yellow 5px; */
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 2rem;
+`
+
+export const ContactText = styled.div`
+    color: white;
+    width: 90%;
+    line-height: 1.5;
 `
 
 export const ContactInfo = styled.div`
@@ -182,5 +199,28 @@ export const TextArea = styled.textarea`
 
     &:focus::placeholder{
         color: transparent;
+    }
+`
+
+export const ButtonContainer = styled.div`
+    margin: 20px auto;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+`
+
+export const Button = styled.button`
+    width: 30%;
+    height: 50px;
+    background-color: #1b1b1c;
+    border: solid 2px #6df7cc; 
+    border-radius: 10px;
+    color: #c3d0db;
+    font-size: 1rem;
+    cursor: pointer;
+
+    &:hover {
+        transition: all 0.2s ease-in-out;
+        background: #155e48;
     }
 `
