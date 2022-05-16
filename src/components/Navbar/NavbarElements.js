@@ -4,13 +4,12 @@ import { Link } from "react-scroll"
 export const Nav = styled.nav`
     /* background: #0c2233; */
     background-color: #1b1b1c;
+    background-color: rgb(27, 27, 28, 0.9);
     height: 80px;
-    // margin-top: -80px;
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     font-size: 1.1rem;
-    /* position: sticky; */
+    position: sticky;
     top: 0;
     z-index: 10;
 
@@ -26,7 +25,6 @@ export const NavbarContainer = styled.div`
     z-index: 1;
     width: 100%;
     padding: 0 12px;
-    /* max-width: 1100px; */
 `
 
 export const NavLogo = styled(Link)`
@@ -38,6 +36,10 @@ export const NavLogo = styled(Link)`
     margin-left: 24px;
     font-weight: bold;
     text-decoration: none;
+
+    &:hover {
+        transform: scale(1.1);
+    }
 `
 
 export const MobileIcon = styled.div`
@@ -101,13 +103,11 @@ export const NavBtn = styled.nav`
 
 export const NavBtnLink = styled.a`
     border-radius: 10px;
-    /* background: #0c2233; */
     background: #1b1b1c;
     white-space: nowrap;
     padding: 10px 22px;
     color: #c3d0db;
     font-size: 1.1rem;
-    /* outline: none; */
     border: solid 1px #6df7cc;
     cursor: pointer;
     transition: all 0.2s ease-in-out;

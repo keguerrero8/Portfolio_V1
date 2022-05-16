@@ -28,7 +28,7 @@ const Navbar = ({toggle}) => {
     <>
       <Nav ref={navbar}>
         <NavbarContainer>
-          <NavLogo to="about">
+          <NavLogo to="hero" smooth={true}>
             KG
           </NavLogo>
           <MobileIcon onClick={toggle}>

@@ -68,6 +68,7 @@ export const ContactText = styled.div`
     width: 90%;
     line-height: 1.5;
     font-size: 1rem;
+    text-align: center;
 
     @media screen and (max-width: 768px) {
         font-size: 1rem;
@@ -95,6 +96,10 @@ export const ContactSocialMediaLink = styled.a`
 
     @media screen and (max-width: 768px) {
         font-size: 2rem;
+    }
+
+    &:hover {
+        transform: scale(1.5);
     }
 `
  

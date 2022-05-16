@@ -16,6 +16,10 @@ export const SideProjectContainer = styled.div`
         width: 90%;
         margin: auto;
     }
+
+    &:hover {
+        transform: scale(0.9);
+    }
 `
 
 export const SideProjectTitle = styled.h1`
@@ -91,6 +95,10 @@ export const SideProjectLink = styled.a`
 
     @media screen and (max-width: 480px) {
         font-size: 1.3rem;
+    }
+
+    &:hover {
+        transform: scale(1.5);
     }
 `
 

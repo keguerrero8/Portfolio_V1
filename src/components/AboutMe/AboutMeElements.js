@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const AboutMeContainer = styled.div` 
     /* border: solid 5px red; */
     height: 100vh;
+    /* height: 1000px; */
     max-width: 1200px;
     margin: auto;
     position: relative;
@@ -15,6 +16,10 @@ export const AboutMeContainer = styled.div`
         justify-content: space-around;
         text-align: center;
         padding: 10px 20px;
+    }
+
+    @media screen and (max-width: 480px) {
+        padding: 10px 30px;
     }
 `
 

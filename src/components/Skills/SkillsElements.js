@@ -58,26 +58,23 @@ export const SkillsSubText = styled.p`
     margin: 10px 0px 40px;
 
     @media screen and (max-width: 768px) {
-        font-size: 1.1rem;
+        font-size: 1rem;
         margin: 2px 0px 30px;
     }
 
-    @media screen and (max-width: 480px) {
-        font-size: 1rem;
-    }
 `
 
 export const Icon = styled.div`
-    font-size: 6rem;
+    font-size: 5.5rem;
     outline: none;
     text-align: center;
 
     @media screen and (max-width: 768px) {
-        font-size: 4rem;
+        font-size: 3.5rem;
     }
 
     @media screen and (max-width: 480px) {
-        font-size: 3rem;
+        font-size: 2rem;
     }
 `
 

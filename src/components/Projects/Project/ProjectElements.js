@@ -52,8 +52,8 @@ export const ProjectOverlay = styled.div`
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        background-color: rgba(0,0,0,0.9);
-        /* background-color: rgba(12, 34, 51, 0.9); */
+        /* background-color: rgba(0,0,0,0.9); */
+        background-color: rgba(12, 34, 51, 0.9);
         border-radius: 10px 10px 0px 0px;
     }
 
@@ -118,7 +118,7 @@ export const ProjectOverlayTechnologies = styled.div`
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 0.5rem;
+        gap: 0.7rem;
     }
 
     @media screen and (max-width: 480px) {
@@ -153,6 +153,10 @@ export const ProjectOverlayLinkWrapper = styled.div`
 `
 
 export const ProjectOverlayLink = styled.a`
+
+    &:hover {
+        transform: scale(1.5);
+    }
 
     @media screen and (max-width: 768px) {
         font-size: 1.5rem;
@@ -191,18 +195,21 @@ export const ProjectContent = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
-    /* border: solid 5px orange; */
 
     @media screen and (max-width: 768px) {
         display: none;
-        /* flex: 0; */
     }
+
 `   
 export const ProjectContentWrapper = styled.div`
-    padding: 10px;
+    padding: 20px;
     background: #102e45;
     border-radius: 5px 5px 0px 0px;
     text-align: center;
+
+    &:hover {
+        transform: scale(0.9);
+    }
 `
 
 export const ProjectTitle = styled.h1`
@@ -249,6 +256,11 @@ export const ProjectLink = styled.a`
     font-size: 2rem;
     cursor: pointer;
     outline: none;
+
+    &:hover {
+        transform: scale(1.5);
+    }
+
 `
 
 export const GithubIcon = styled(AiFillGithub)`

@@ -3,19 +3,24 @@ import styled from "styled-components";
 export const HeroContainer = styled.div`
     /* background: #0c2233; */
     background: #1b1b1c;
-    height: 100vh;
+    /* height: 100vh; */
+    height: 1000px;
     position: relative;
     z-index: 1;
     max-width: 1200px;
     margin: auto;
     /* border: solid 5px green; */
+    @media screen and (max-width: 768px) {
+        height: 800px;
+    }
+
 `
 
 export const HeroContent = styled.div`
     z-index: 3;
     position: absolute;
     padding: 10px;
-    top: 50%;
+    top: 45%;
     left: 15%;
     transform: translate(0, -50%);
 
@@ -23,6 +28,7 @@ export const HeroContent = styled.div`
         left: 10%;
         top: 40%;
         transform: translate(0, -40%);
+        padding: 20px;
     }
 
     @media screen and (max-width: 480px) {
@@ -42,12 +48,12 @@ export const HeroText = styled.div`
     /* text-align: center; */
 
     @media screen and (max-width: 768px) {
-        font-size: 1.1rem;
+        font-size: 1rem;
         width: 90%;
     }
 
     @media screen and (max-width: 480px) {
-        font-size: 1rem;
+        font-size: 0.9rem;
         width: 100%;
     }
 `

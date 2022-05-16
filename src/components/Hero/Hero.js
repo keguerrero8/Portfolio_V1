@@ -17,7 +17,7 @@ const HeroElements = () => {
   }, []);
 
   return (
-    <HeroContainer>
+    <HeroContainer id="hero">
         {/* <HeroBg>
             <VideoBg autoPlay loop muted src={Video} type="video/mp4" />
         </HeroBg> */}
@@ -25,7 +25,7 @@ const HeroElements = () => {
           <HeroText ref={hi} isHello={true}>Hi, my name is</HeroText>
           <HeroName ref={name}>Kevin Guerrero</HeroName>
           <HeroText ref={content}>
-            I'm a software engineer with a strong passion for problem solving and building <span style={{color: "#6df7cc"}}>full stack web applications.</span> Currently, I am looking for opportunities where I can continue to learn and grow, while providing immediate
+            I'm a software engineer with a strong passion for problem solving and building <span style={{color: "#6df7cc"}}>full stack web applications.</span> Currently, I am seeking opportunities where I can continue to learn and grow, while providing 
             impact in a team setting.  
           </HeroText>
         </HeroContent>
