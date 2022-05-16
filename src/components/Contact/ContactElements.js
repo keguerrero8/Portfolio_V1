@@ -19,6 +19,14 @@ export const ContactTitle = styled.h1`
     font-size: 3rem;
     font-weight: solid;
     text-align: center;
+
+    @media screen and (max-width: 768px) {
+        font-size: 2rem;
+    }
+
+    @media screen and (max-width: 480px) {
+        font-size: 1.5em;
+    }
     
 `
 
@@ -59,6 +67,17 @@ export const ContactText = styled.div`
     color: white;
     width: 90%;
     line-height: 1.5;
+    font-size: 1rem;
+
+    @media screen and (max-width: 768px) {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    @media screen and (max-width: 480px) {
+        font-size: 0.9rem;
+    }
+
 `
 
 export const ContactInfo = styled.div`
@@ -73,20 +92,34 @@ export const ContactSocialMediaLink = styled.a`
     font-size: 2.5rem;
     cursor: pointer;
     outline: none;
-`
 
+    @media screen and (max-width: 768px) {
+        font-size: 2rem;
+    }
+`
+ 
 export const ContactSocialMedia = styled.div`
     width: 60%;
     margin: 30px auto;
-    display: flex;
+    display: ${props => props.primary ? "flex" : "none"};
     justify-content: space-around;
+
+    @media screen and (max-width: 768px) {
+        display: flex;
+        justify-content: space-around;
+    }
 `
 
 export const ContactInfoWrapper = styled.div`
     font-size: 1.5rem;
     color: #c3d0db;
-    display: flex;
+    display: ${props => props.primary ? "flex" : "none"};
     align-items: center;
+
+    @media screen and (max-width: 768px) {
+        display: flex;
+        font-size: 1rem;
+    }
 `
 
 export const PhoneIcon = styled(AiFillPhone)`
@@ -121,6 +154,10 @@ export const InputContainer = styled.div`
     display: flex;
     justify-content: center;
     gap: 0.5rem;
+
+    @media screen and (max-width: 480px) {
+        flex-direction: column;
+    }
 `
 
 export const InputSmall = styled.input`
@@ -145,6 +182,12 @@ export const InputSmall = styled.input`
 
     &:focus::placeholder{
         color: transparent;
+    }
+
+    @media screen and (max-width: 480px) {
+        font-size: 0.8rem;
+        width: 100%;
+        height: 40px;
     }
 
 `
@@ -174,6 +217,11 @@ export const InputLarge = styled.input`
     &:focus::placeholder{
         color: transparent;
     }
+
+    @media screen and (max-width: 480px) {
+        font-size: 0.8rem;
+        height: 40px;
+    }
 `
 
 export const TextArea = styled.textarea`
@@ -200,6 +248,10 @@ export const TextArea = styled.textarea`
     &:focus::placeholder{
         color: transparent;
     }
+
+    @media screen and (max-width: 480px) {
+        font-size: 0.8rem;
+    }
 `
 
 export const ButtonContainer = styled.div`
@@ -207,6 +259,17 @@ export const ButtonContainer = styled.div`
     width: 100%;
     display: flex;
     justify-content: end;
+    align-items: center;
+`
+
+export const SubmitText = styled.p`
+    color: #c3d0db;
+    margin-right: 20px;
+    font-size: 1rem;
+
+    @media screen and (max-width: 480px) {
+        font-size: 0.8rem;
+    }
 `
 
 export const Button = styled.button`
@@ -218,6 +281,12 @@ export const Button = styled.button`
     color: #c3d0db;
     font-size: 1rem;
     cursor: pointer;
+
+    @media screen and (max-width: 480px) {
+        font-size: 0.8rem;
+        height: 40px;
+        width: 50%;
+    }
 
     &:hover {
         transition: all 0.2s ease-in-out;
