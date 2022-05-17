@@ -12,6 +12,15 @@ export const Nav = styled.nav`
     position: sticky;
     top: 0;
     z-index: 10;
+    transform: translateY(-4rem);
+    animation: fadeInUp 2s ease forwards;
+
+    @keyframes fadeInUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
 
     @media screen and (max-width: 960px) {
         transition: 0.8s all ease;

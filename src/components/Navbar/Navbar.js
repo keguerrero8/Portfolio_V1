@@ -47,10 +47,9 @@ const Navbar = ({toggle}) => {
             <NavItem>
               <NavLinks to="contact" smooth={true}>Contact</NavLinks>
             </NavItem>
-            <NavBtn>
+            {/* <NavBtn>
               <NavBtnLink href="./Resume_KG.pdf" download>Resume</NavBtnLink>
-              {/* <NavBtnLink href={ResumePDF} download>Resume</NavBtnLink> */}
-            </NavBtn>
+            </NavBtn> */}
           </NavMenu>
         </NavbarContainer>
       </Nav>
