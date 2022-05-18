@@ -2,9 +2,10 @@ import styled from "styled-components"
 import { Link } from "react-scroll"
 
 export const Nav = styled.nav`
-    /* background: #0c2233; */
-    background-color: #1b1b1c;
-    background-color: rgb(27, 27, 28, 0.9);
+    /* background-color: #0c2233; */
+    background-color: rgb(27, 27, 28, 0.8);
+    /* background-color: #1b1b1c; */
+    /* background-color: rgb(12, 34, 51, 0.8); */
     height: 80px;
     display: flex;
     align-items: center;
@@ -45,6 +46,7 @@ export const NavLogo = styled(Link)`
     margin-left: 24px;
     font-weight: bold;
     text-decoration: none;
+    word-spacing: 2em;
 
     &:hover {
         transform: scale(1.1);
@@ -98,32 +100,5 @@ export const NavLinks = styled(Link)`
 
     &:hover {
         color: #6df7cc;
-    }
-`
-
-export const NavBtn = styled.nav`
-    display: flex;
-    align-items: center;
-
-    @media screen and (max-width: 768px) {
-        display: None;
-    }
-`
-
-export const NavBtnLink = styled.a`
-    border-radius: 10px;
-    background: #1b1b1c;
-    white-space: nowrap;
-    padding: 10px 22px;
-    color: #c3d0db;
-    font-size: 1.1rem;
-    border: solid 1px #6df7cc;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    text-decoration: none;
-
-    &:hover {
-        transition: all 0.2s ease-in-out;
-        background: #155e48;
     }
 `

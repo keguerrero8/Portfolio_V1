@@ -5,9 +5,8 @@ import {
     CloseIcon, 
     SidebarWrapper, 
     SidebarMenu, 
-    SidebarLink, 
-    SideBtnWrap, 
-    SidebarResume 
+    SidebarLink,
+    SideBarLogo
 } from './SidebarElements'
 
 const Sidebar = ({toggle, isOpen}) => {
@@ -18,22 +17,22 @@ const Sidebar = ({toggle, isOpen}) => {
       </Icon>
       <SidebarWrapper>
           <SidebarMenu>
-            <SidebarLink to="about" onClick={toggle} smooth={true}>
+            <SidebarLink to="about" onClick={toggle} smooth={true} duration={500} spy={true} offset={-80}>
                 About
             </SidebarLink>
-            <SidebarLink to="skills" onClick={toggle} smooth={true}>
+            <SidebarLink to="skills" onClick={toggle} smooth={true} duration={500} spy={true} offset={-80}>
                 Skills
             </SidebarLink>
-            <SidebarLink to="projects" onClick={toggle} smooth={true}>
+            <SidebarLink to="projects" onClick={toggle} smooth={true} duration={500} spy={true} offset={-80}>
                 Projects
             </SidebarLink>
-            <SidebarLink to="contact" onClick={toggle} smooth={true}>
+            <SidebarLink to="contact" onClick={toggle} smooth={true} duration={500} spy={true} offset={-80}>
                 Contact
             </SidebarLink>
           </SidebarMenu>
-          <SideBtnWrap>
-              <SidebarResume href="./Resume_KG.pdf" download>Resume</SidebarResume>
-          </SideBtnWrap>
+          <SideBarLogo >
+            <span style={{fontSize: "1.5rem", color: "#c3d0db"}}>{"<"}</span >{"KG"}<span style={{fontSize: "1.5rem", color: "#c3d0db"}}>{">"}</span>
+          </SideBarLogo>
       </SidebarWrapper>
     </SidebarContainer>
   )

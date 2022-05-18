@@ -4,12 +4,10 @@ export const HeroContainer = styled.div`
     /* background: #0c2233; */
     /* background: #1b1b1c; */
     min-height: 100vh;
-    /* height: 800px; */
     position: relative;
     z-index: 1;
     max-width: 1200px;
     margin: auto;
-    /* border: solid 5px green; */
     @media screen and (max-width: 768px) {
         height: 800px;
     }
@@ -43,16 +41,7 @@ export const HeroText = styled.div`
     align-self: start;
     width: 90%;
     line-height: 1.5;
-    opacity: 0;
-    transform: translateY(3rem);
-    animation: fadeInUp 2s ease forwards;
-
-    @keyframes fadeInUp {
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
+    opacity: 1;
 
     @media screen and (max-width: 768px) {
         font-size: 1rem;
@@ -124,39 +113,8 @@ export const HeroTitle = styled.h1`
     }
 `
 
-export const HeroBg = styled.div`
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 800px;
-    overflow: hidden;
-    background-color: rgb(27, 27, 28, 0.9);
-`
-export const VideoBg = styled.video`
-    width: 100%;
-    height: 100%;
-    -o-object-ft: cover;
-    object-fit: cover;
-`
-
 export const ResumeBtn = styled.nav`
     margin-top: 50px;
-    transform: translateY(3rem);
-    animation: fadeInUp 2s ease forwards;
-
-    @keyframes fadeInUp {
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    @media screen and (max-width: 768px) {
-        display: none;
-    }
 `
 
 export const ResumeBtnLink = styled.a`
@@ -175,8 +133,4 @@ export const ResumeBtnLink = styled.a`
         transition: all 0.2s ease-in-out;
         background: #155e48;
     }
-
-    /* @media screen and (max-width: 768px) {
-        font-size: 0.9rem;
-    } */
 `

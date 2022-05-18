@@ -1,42 +1,43 @@
 import React, {useRef, useEffect} from 'react'
 import { HeroContainer, HeroContent, HeroText, HeroTitle, ResumeBtn, ResumeBtnLink } from './HeroElements'
-import gsap from 'gsap'
-import { RoughEase } from "gsap/EasePack";
-import { TextPlugin } from "gsap/TextPlugin";
+import ScrollTrigger from 'gsap/ScrollTrigger';
+import gsap from 'gsap';
+gsap.registerPlugin(ScrollTrigger)
 
-gsap.registerPlugin(TextPlugin, RoughEase);
+const HeroElements = () => {  
+  const heroHi = useRef()
+  const heroContent = useRef()
+  const heroResume = useRef()
 
-const HeroElements = () => {
-  const name = useRef()
-  const content = useRef()
-  const hi = useRef()
-  const t1 = useRef()
-  const titles = ["Software Engineer", "System Engineer", "Tech Enthusiast"]
+  useEffect(() => {
+    gsap.fromTo(heroContent.current, {y: -30, opacity: 0}, {y: 0, opacity: 1, duration: 1, scrollTrigger: {
+      trigger: heroContent.current,
+      toggleActions: "restart none restart none"
+    }})
 
+    gsap.fromTo(heroHi.current, {y: -30, opacity: 0}, {y: 0, opacity: 1, duration: 1, scrollTrigger: {
+      trigger: heroHi.current,
+      toggleActions: "restart none restart none"
+    }})
 
-  // useEffect(() => {
-  //   t1.current = gsap.timeline({defaults: {duration: 1, ease: "sine"}})
-  //   .to(hi.current, { opacity: 1})
-  //   // .to(name.current, { opacity: 1})
-  //   // .to(content.current, { opacity: 1})
-
-  // }, []);
-
-
+    gsap.fromTo(heroResume.current, {y: -30, opacity: 0}, {y: 0, opacity: 1, duration: 1, scrollTrigger: {
+      trigger: heroResume.current,
+      toggleActions: "restart none restart none"
+    }})
+  }, [])
   
   return (
     <div style={{position: 'relative'}}>
     <HeroContainer id="hero">
         <HeroContent>
-          <HeroText ref={hi} isHello={true}>Hi, my name is</HeroText>
-          {/* <HeroTitle>I am a<span className="text"></span><span style={{fontWeight: 400}}>_</span></HeroTitle> */}
+          <HeroText isHello={true} ref={heroHi}>Hi, my name is</HeroText>
           <HeroTitle>Kevin Guerrero</HeroTitle>
-          <HeroText ref={content}>
+          <HeroText ref={heroContent}>
             I'm a <span style={{color: "#6df7cc"}}>software engineer</span> with previous <span style={{color: "#6df7cc"}}>systems engineering</span> experience. I specialize in building <span style={{color: "#6df7cc"}}>full stack web applications </span>
             and approach my solutions algorithmically to produce maintainable and scalable code.
           </HeroText>
-          <ResumeBtn>
-              <ResumeBtnLink href="./Resume_KG.pdf" download>Download Resume</ResumeBtnLink>
+          <ResumeBtn ref={heroResume}>
+              <ResumeBtnLink href="./Resume_KG.pdf" download >Download Resume</ResumeBtnLink>
           </ResumeBtn>
         </HeroContent>
     </HeroContainer>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useRef, useEffect} from 'react'
 import { 
     SideProjectContainer,
     SideProjectTitle,
@@ -9,10 +9,24 @@ import {
     SideProjectLink,
     GithubIcon
 } from './SideProjectElements'
+import ScrollTrigger from 'gsap/ScrollTrigger';
+import gsap from 'gsap';
+gsap.registerPlugin(ScrollTrigger)
 
 const SideProject = ({project}) => {
+
+    const projectEl = useRef()
+  
+    useEffect(() => {
+      gsap.fromTo(projectEl.current, {scale: 0.8, opacity: 0}, {scale: 1, opacity: 1, duration: 2, scrollTrigger: {
+        trigger: projectEl.current,
+        toggleActions: "restart none restart none"
+      }})
+  
+    }, [])
+
   return (
-    <SideProjectContainer>
+    <SideProjectContainer ref={projectEl}>
         <SideProjectTitle>{project.title}</SideProjectTitle>
         <SideProjectDescription>{project.description}</SideProjectDescription>
         <SideProjectTechnologies>

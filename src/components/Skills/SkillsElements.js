@@ -9,10 +9,9 @@ import {SiRubyonrails} from "react-icons/si"
 import {DiGit} from "react-icons/di"
 
 export const SkillsContainer = styled.div`
-    /* border: solid 5px green; */
     max-width: 1200px;
-    margin: auto;
-    height: 100vh;
+    margin: 30px auto;
+    min-height: 100vh;
     padding: 10px 40px;
     display: flex;
     align-items: center;

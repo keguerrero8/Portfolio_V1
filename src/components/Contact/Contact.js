@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react'
+import React, {useRef, useState, useEffect} from 'react'
 import emailjs from '@emailjs/browser';
 import { 
     ContactContainer,
@@ -15,6 +15,7 @@ import {
     MailIcon,
     LinkedInIcon,
     GithubIcon,
+    LeetCodeIcon,
     ContactText,
     FormContainer,
     InputContainer,
@@ -25,6 +26,9 @@ import {
     ButtonContainer,
     SubmitText
 } from './ContactElements'
+import ScrollTrigger from 'gsap/ScrollTrigger';
+import gsap from 'gsap';
+gsap.registerPlugin(ScrollTrigger)
 
 const Contact = () => {
   const formRef = useRef()
@@ -36,6 +40,20 @@ const Contact = () => {
       user_subject: "",
       message: ""
   })
+  const contactLeft = useRef()
+  const contactRight = useRef()
+
+  useEffect(() => {
+    gsap.fromTo(contactRight.current, {y: -30, opacity: 0}, {y: 0, opacity: 1, duration: 2, scrollTrigger: {
+      trigger: contactRight.current,
+      toggleActions: "restart none restart none"
+    }})
+
+    gsap.fromTo(contactLeft.current, {y: 30, opacity: 0}, {y: 0, opacity: 1, duration: 2, scrollTrigger: {
+      trigger: contactLeft.current,
+      toggleActions: "restart none restart none"
+    }})
+  }, [])
 
   const handleChange = (e) => {
       setFormData({
@@ -73,7 +91,7 @@ const Contact = () => {
   return (
     <ContactContainer id="contact">
         <ContactWrapper>
-            <ContactLeft>
+            <ContactLeft ref={contactLeft}>
                 <ContactInfo>
                     <ContactInfoWrapper primary>
                         <MapIcon /> 
@@ -91,9 +109,10 @@ const Contact = () => {
                 <ContactSocialMedia primary>
                     <ContactSocialMediaLink href="https://www.linkedin.com/in/kevin-guerrero-184511b5"><LinkedInIcon /></ContactSocialMediaLink>
                     <ContactSocialMediaLink href="https://github.com/keguerrero8"><GithubIcon /></ContactSocialMediaLink>
+                    <ContactSocialMediaLink href="https://leetcode.com/keguerrero/"><LeetCodeIcon /></ContactSocialMediaLink>
                 </ContactSocialMedia>
             </ContactLeft>
-            <ContactRight>
+            <ContactRight ref={contactRight}>
                 <ContactTitle>Contact Me</ContactTitle>
                 <ContactInfoWrapper>
                         <MailIcon /> 
@@ -123,6 +142,7 @@ const Contact = () => {
                 <ContactSocialMedia >
                     <ContactSocialMediaLink href="https://www.linkedin.com/in/kevin-guerrero-184511b5"><LinkedInIcon /></ContactSocialMediaLink>
                     <ContactSocialMediaLink href="https://github.com/keguerrero8"><GithubIcon /></ContactSocialMediaLink>
+                    <ContactSocialMediaLink href="https://leetcode.com/keguerrero/"><LeetCodeIcon /></ContactSocialMediaLink>
                 </ContactSocialMedia>
             </ContactRight>
         </ContactWrapper>

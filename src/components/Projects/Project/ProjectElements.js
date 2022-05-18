@@ -4,7 +4,6 @@ import {AiOutlineLink} from "react-icons/ai"
 import {FiVideo} from "react-icons/fi"
 
 export const ProjectContainer = styled.div` 
-    /* border: solid 5px yellow; */
     display: flex;
     align-items: center;
     margin: 10px 0px 30px;
@@ -12,7 +11,6 @@ export const ProjectContainer = styled.div`
 `
 
 export const ProjectImageContainer = styled.div` 
-    /* border: solid 5px red; */
     flex: 0.9;
     display: flex;
     align-items: center;
@@ -109,7 +107,6 @@ export const ProjectOverlayDescription = styled.div`
 
 export const ProjectOverlayTechnologies = styled.div`
     display: none;
-    /* height: 40px; */
 
     @media screen and (max-width: 768px) {
         display: block;
@@ -185,7 +182,6 @@ export const ProjectCircle = styled.div`
 `
 
 export const ProjectImg = styled.img`
-    /* object-fit: contain; */
     width: 100%;
     height: 100%;
 `

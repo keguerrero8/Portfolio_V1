@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useRef, useEffect} from 'react'
 import { 
     ProjectContainer,
     ProjectImageContainer,
@@ -20,18 +20,36 @@ import {
     ProjectOverlayLinkWrapper,
     OverlayTechnology,
     ProjectOverlayLink,
-
     Technology,
     GithubIcon,
     LinkIcon,
     VideoIcon
 } from './ProjectElements'
+import ScrollTrigger from 'gsap/ScrollTrigger';
+import gsap from 'gsap';
+gsap.registerPlugin(ScrollTrigger)
 
 
 const Project = ({project}) => {
+
+    const projectContent = useRef()
+    const projectImage = useRef()
+  
+    useEffect(() => {
+      gsap.fromTo(projectContent.current, {y: -30, opacity: 0}, {y: 0, opacity: 1, duration: 2, scrollTrigger: {
+        trigger: projectContent.current,
+        toggleActions: "restart none restart none"
+      }})
+  
+      gsap.fromTo(projectImage.current, {y: 30, opacity: 0}, {y: 0, opacity: 1, duration: 2, scrollTrigger: {
+        trigger: projectImage.current,
+        toggleActions: "restart none restart none"
+      }})
+    }, [])
+
   return (
     <ProjectContainer>
-        <ProjectImageContainer>
+        <ProjectImageContainer ref={projectImage}>
             <ProjectImageWrapper>
                 <ProjectBrowser>
                     <ProjectCircle />
@@ -53,7 +71,7 @@ const Project = ({project}) => {
                 </ProjectOverlayLinkWrapper>
             </ProjectOverlay>
         </ProjectImageContainer>
-        <ProjectContent>
+        <ProjectContent ref={projectContent}>
             <ProjectContentWrapper>
                 <ProjectTitle>{project.title}</ProjectTitle>
                 <ProjectDescription>{project.description}</ProjectDescription>

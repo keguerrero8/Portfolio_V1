@@ -10,15 +10,16 @@ import Contact from '../components/Contact/Contact';
 
 const Home = ({theme}) => {
   const [isOpen, setOpen] = useState(false)
-
   const toggle = () => {
       setOpen(!isOpen)
   }
+
+
   return (
     <>
       <Sidebar isOpen={isOpen} toggle={toggle}/>
       <Navbar toggle={toggle}/>
-      <Hero />
+      <Hero/>
       <AboutMe/>
       <Skills theme={theme}/>
       <Projects />

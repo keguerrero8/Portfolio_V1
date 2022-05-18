@@ -1,9 +1,7 @@
 import styled from "styled-components";
 
 export const AboutMeContainer = styled.div` 
-    /* border: solid 5px red; */
-    height: 100vh;
-    /* height: 1000px; */
+    min-height: 100vh;
     max-width: 1200px;
     margin: auto;
     position: relative;
@@ -24,7 +22,6 @@ export const AboutMeContainer = styled.div`
 `
 
 export const AboutMePicContainer = styled.div` 
-    /* border: solid 5px red; */
     flex: 0.8;
     display: flex;
     align-items: center;
@@ -85,7 +82,6 @@ export const AboutMeImg = styled.img`
 
 export const AboutMeContent = styled.div` 
     flex: 1.2;
-    /* border: solid 5px yellow; */
 
     @media screen and (max-width: 768px) {
         flex: 1;
@@ -98,7 +94,6 @@ export const AboutMeTitle = styled.h1`
     text-align: center;
     font-size: 2rem;
     font-weight: solid;
-    /* border: solid 5px yellow; */
 
     @media screen and (max-width: 768px) {
         font-size: 1.5rem;

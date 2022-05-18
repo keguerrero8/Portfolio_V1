@@ -3,7 +3,7 @@ export const projects = [
         id: 1,
         title: "DevMaster",
         image: "pictures/Devmaster.gif",
-        description: "A project management app for software engineers inspired by Scrum framework. Features include diagram creation, project taskboard management, and chat functionality.",
+        description: "A project management app for software engineers inspired by the Scrum framework. Features include diagram creation, project taskboard management, and chat functionality.",
         githubLink: "https://github.com/keguerrero8/DevMaster",
         technologies: ["React", "Ruby on Rails", "Websockets", "Github API", "Heroku"],
         demoLink: "https://www.loom.com/share/c0e09f357d3e4a82a6633f3cdd49aa48",

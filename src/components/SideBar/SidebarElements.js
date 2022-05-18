@@ -7,7 +7,6 @@ export const SidebarContainer = styled.aside`
     z-index: 999;
     width: 100%;
     height: 100%;
-    /* background: #102e45; */
     background-color: #1b1b1c;
     display: grid;
     align-items: center;
@@ -34,7 +33,6 @@ export const Icon = styled.div`
 
 export const SidebarWrapper = styled.div`
     color: black;
-    /* background: #102e45; */
 `
 
 export const SidebarMenu = styled.ul`
@@ -62,27 +60,13 @@ export const SidebarLink = styled(Link)`
     }
 `
 
-export const SideBtnWrap = styled.div`
-    display: flex;
-    justify-content: center;
-`
-
-export const SidebarResume = styled.a`
-    border-radius: 50px;
-    /* background: #102e45; */
-    background: #1b1b1c;
-    white-space: nowrap;
-    padding: 16px 64px;
-    color: #c3d0db;
-    font-size: 1.1rem;
-    outline: none;
-    border: solid 1px #6df7cc;
+export const SideBarLogo = styled.div`
+    color: #6df7cc;
     cursor: pointer;
-    transition: all 0.2s ease-in-out;
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
     text-decoration: none;
-
-    &:hover {
-        transition: all 0.2s ease-in-out;
-        background: #155e48;
-    }
 `

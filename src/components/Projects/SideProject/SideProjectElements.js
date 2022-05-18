@@ -18,7 +18,7 @@ export const SideProjectContainer = styled.div`
     }
 
     &:hover {
-        transform: scale(0.9);
+        transform: scale(0.7);
     }
 `
 

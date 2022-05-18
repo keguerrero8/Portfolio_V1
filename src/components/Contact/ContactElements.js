@@ -4,6 +4,7 @@ import {FaMapMarkerAlt} from "react-icons/fa"
 import {AiOutlineMail} from "react-icons/ai"
 import {AiFillLinkedin} from "react-icons/ai"
 import {AiFillGithub} from "react-icons/ai"
+import {SiLeetcode} from "react-icons/si"
 
 export const ContactContainer = styled.div`
     height: 100vh;
@@ -42,7 +43,6 @@ export const ContactWrapper = styled.div`
 
 export const ContactLeft = styled.div`
     flex: 0.7;
-    /* border: solid green 5px; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -55,7 +55,6 @@ export const ContactLeft = styled.div`
 
 export const ContactRight = styled.div`
     flex: 1.3;
-    /* border: solid yellow 5px; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -150,8 +149,11 @@ export const GithubIcon = styled(AiFillGithub)`
     color: #6df7cc;
 `
 
+export const LeetCodeIcon = styled(SiLeetcode)`
+    color: #6df7cc;
+`
+
 export const FormContainer = styled.form`
-    /* border: solid blue 5px; */
     width: 90%;
 `
 
