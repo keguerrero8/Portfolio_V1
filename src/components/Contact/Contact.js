@@ -130,7 +130,7 @@ const Contact = () => {
                     <InputContainer>
                         <InputLarge placeholder="Subject" name="user_subject" onChange={handleChange}/>
                     </InputContainer>
-                    <TextArea placeholder="Enter Message here..." name="message" onChange={handleChange}/>
+                    <TextArea placeholder="Enter message here..." name="message" onChange={handleChange}/>
                     <ButtonContainer>
                         <SubmitText>
                             {isSent? "Thank you for the message." : ""}
