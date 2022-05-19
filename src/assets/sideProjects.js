@@ -2,7 +2,7 @@ export const sideProjects = [
     {
         id: 4,
         title: "Let's Taco'bout it",
-        description: "Tinder clone to find matching restuarants chosen between two users for date night.",
+        description: "Tinder clone to find matching restaurants chosen between two users for date night.",
         githubLink: "https://github.com/keguerrero8/carb-app",
         technologies: ["React", "Material UI", "Sinatra"]
     },
